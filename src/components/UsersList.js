@@ -47,10 +47,6 @@ export default function UsersList() {
         )
 
         setSearchUsers(arr)
-
-
-        debugger
-
     }
 
 
