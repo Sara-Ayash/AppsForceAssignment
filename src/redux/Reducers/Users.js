@@ -1,6 +1,3 @@
-import produce from 'immer';
-import createReducer from "./ReducerUtils";
-
 const initialState = {
   users: []
 }
@@ -8,20 +5,16 @@ const initialState = {
 export default function users(state = initialState, action) {
   switch (action.type) {
     case 'SET_USERS': {
-
       return state = { users: action.payload }
     }
     case 'ADD_USER': {
-      debugger
+       
       return state = {
         users:
           [...state.users, action.payload]
-
-
       }
     }
     case 'UPDATE_USER': {
-
       return state = {
         users:
           state.users.map((user, index) => {
@@ -35,9 +28,6 @@ export default function users(state = initialState, action) {
     }
 
     case 'DELETE_USER': {
-      // 
-      // state.users.splice(action.payload, 1)
-      // return state
       return state = {
         users:
           state.users.map((user, index) => {
@@ -50,13 +40,7 @@ export default function users(state = initialState, action) {
 
       }
     }
-
-
-
-
-
     default: {
-
       return state
     }
 

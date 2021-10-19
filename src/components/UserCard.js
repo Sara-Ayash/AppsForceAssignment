@@ -1,11 +1,8 @@
 
-import React, { useEffect, useState } from 'react';
-import classNames from "classnames";
+import React from 'react'; 
 import { useSelector, useDispatch } from 'react-redux';
-import actions from './../redux/actions'
-import ReactJson from 'react-json-view'
-import { Container, Row, Col, Card, Button } from 'react-bootstrap'
-import { getDefaultNormalizer } from '@testing-library/react';
+import actions from './../redux/actions' 
+import { Row, Col, Button } from 'react-bootstrap' 
 import UserModal from './UserModal'
 
 
@@ -37,7 +34,7 @@ export default function UserCard(props) {
             <Col style={{ }}>
                 <h5>{users[props.index].name?.title}{' '}{users[props.index].name?.first}{' '}{users[props.index].name?.last}</h5>
                 <h5>{users[props.index].email}</h5>
-                <h5>{users[props.index].location?.street?.number}{' '}{users[props.index].location?.street?.name}{', '}{users[props.index].location?.city}</h5>
+                <h5>{users[props.index].location?.street?.number}{' '}{users[props.index].location?.street?.name}{', '}{users[props.index].location?.city}{', '}{users[props.index].location?.country}</h5>
                 <h5>{users[props.index].id?.name}{' '}{users[props.index].id?.value}</h5>
                 <Button style={{marginRight:'15px'}}
                     variant="danger"
